@@ -4,50 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import capybara from './capybara.jpg'
+import {Routes, Route} from 'react-router-dom'
+import Home from './Home.jsx'
+import AboutMe from './AboutMe.jsx'
 
 function App() {
 
   return (
-    <>
+    <div className="App">
       <Navbar />
-      <div>
-        <h1 className="text-3xl font-bold underline">
-        Hi, I'm Kenny | Software Engineer
-        </h1>
-        <div className="chat chat-start">
-          <div className="chat-image avatar">
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS chat bubble component"
-                src={capybara} />
-            </div>
-          </div>
-          <div className="chat-bubble chat-bubble-primary">I love automating all the things.</div>
-        </div>
-        <div className="chat chat-start">
-          <div className="chat-image avatar">
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS chat bubble component"
-                src={capybara} />
-            </div>
-          </div>
-          <div className="chat-bubble chat-bubble-primary">Currently dabbling in the cloud, specifically AWS!</div>
-        </div>
-        <div className="chat chat-start">
-          <div className="chat-image avatar">
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS chat bubble component"
-                src={capybara} />
-            </div>
-          </div>
-          <div className="chat-bubble chat-bubble-primary">Otherwise expect to find me traveling the world and going on hikes!</div>
-        </div>
-
-      </div>
-      
-    </>
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="/aboutme" element={ <AboutMe/> } />
+      </Routes>
+    </div>
     
   )
 }

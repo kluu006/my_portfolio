@@ -6,7 +6,9 @@ function Navbar () {
         <div className="navbar bg-base-100">
         <div className="navbar-start">
           
-          <a className="btn btn-ghost text-xl">Kenny Luu</a>
+          <a className="btn btn-ghost text-xl">
+          <Link to ="">Kenny Luu</Link>
+          </a>
         </div>
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-20">
@@ -17,7 +19,7 @@ function Navbar () {
             </li>
             <li>
               <button className="btn btn-secondary">
-                <Link to ="aboutme">Projects</Link>
+                <Link to ="projects">Projects</Link>
               </button>
             </li>
           </ul>

@@ -7,16 +7,19 @@ import capybara from './capybara.jpg'
 import {Routes, Route} from 'react-router-dom'
 import Home from './Home.jsx'
 import AboutMe from './AboutMe.jsx'
+import Projects from './Projects.jsx'
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={ <Home/> } />
         <Route path="/aboutme" element={ <AboutMe/> } />
+        <Route path="/projects" element={ <Projects/> } />
       </Routes>
+      <Navbar />
     </div>
     
   )
